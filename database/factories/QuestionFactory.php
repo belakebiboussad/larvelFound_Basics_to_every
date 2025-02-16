@@ -17,7 +17,6 @@ $factory->define(App\Question::class, function (Faker\Generator $faker) {
 
     return [
         'title' => str_random(100),
-        'description' => str_random(25 0),
-
+        'description' => str_random(255),
     ];
 });

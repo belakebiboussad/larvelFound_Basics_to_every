@@ -13,7 +13,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        $qs = Question::orderBy('created_at', 'desc')->paginate(5);
+        $qs = Question::orderBy('created_at', 'desc')->simplePaginate(5);
         return view('questions.index')->with('qs', $qs);
     }
 

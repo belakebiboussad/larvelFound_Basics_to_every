@@ -18,3 +18,7 @@ Route::get('/about','PageController@about');
 Route::get('/contact','PageController@contact');
 Route::post('/contact','PageController@submitContact');
 Route::resource('questions','QuestionController');
+Route::resource('answers','AnswersController',['except'=>['index','create','show']]) ;
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
